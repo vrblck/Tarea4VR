@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+    <title>Página de Presentación</title>
+</head>
+<body>
+    <header class="banner">
+        <div class="contenido-banner">
+           <h1>Valentina Roselló</h1> 
+        </div>
+    </header>
+
+    <section class="gallery">
+        <h2>Galería de Fotos</h2>
+        <div class="image-container">
+            <img src="img/vale2.jpg" alt="Imagen 1" class="gallery-image" data-description="Esa vez subí el cerro San Cristóbal con mi perro por milésima vez jaja">
+            <img src="img/luca1.jpg" alt="Imagen 2" class="gallery-image" data-description="Una foto de mi perro Luca porque soy su fan n1">
+            <img src="img/vale4.jpg" alt="Imagen 3" class="gallery-image" data-description="En ese día estuve viendo anime y saqué una foto para ver como me veía, no me daba cuenta de lo cerca que estaba de mi pc xd con razón estoy piti">
+            <img src="img/luca2.jpg" alt="Imagen 4" class="gallery-image" data-description="Otra foto más del Luca, por qué no?">
+            <img src="img/vale5.jpg" alt="Imagen 5" class="gallery-image" data-description="Me encantan los días nublados y lluviosos, pero odio ir a la U en esos días">
+            <img src="img/luca3.jpg" alt="Imagen 6" class="gallery-image" data-description="Ya, última foto de mi perrito">
+        </div>
+        <div class="image-modal" style="display: none;">
+            <img src="" alt=" " id="modal-image">
+            <p id="modal-description"></p>
+        </div>
+    </section>    
+
+    <section class="interests">
+        <h2>Mis Intereses</h2>
+        <div class="interest">
+            <h3>Deportes</h3>
+            <p>Me encanta hacer deporte y durante toda mi vida he hecho muchos. Pero actualmente solo hago Taekwondo ATA y voy al gym de vez en cuando porque tengo muy poco tiempo</p>
+        </div>
+        <div class="interest">
+            <h3>Series</h3>
+            <p>A pesar de tener tan poco tiempo igual veo todo tipo de series y también todo tipo de anime. Mis favoritos son: Mr. Robot, The Boys, Haikyuu y Bungou Stray Dogs (tengo muchos más pero para resumir)</p>
+        </div>
+        <div class="interest">
+            <h3>Dibujo</h3>
+            <p>Disfruto mucho dibujar y tengo algo de talento en eso, empecé con el dibujo realista y terminé dibujando anime</p>
+        </div>
+        <div class="gallery">
+                <h2>Galería de Intereses</h2>
+                <div class="image-container">
+                    <img src="img/top.jpg" alt="Imagen 7" class="gallery-image" data-description="Fui al Lollapalooza a ver mi banda favorita (twenty one pilots) y estuve 8 años esperando ese momento. Fue un día muy feliz para mi">
+                    <img src="img/tkd.jpg" alt="Imagen 8" class="gallery-image" data-description="Uno de mis hobbies, el Taekwondo. En esta foto tengo el cinturón rojo y actualmente soy cinturón negro 1ro Dan">
+                    <img src="img/dibujo1.jpg" alt="Imagen 9" class="gallery-image" data-description="Denji de Chainsawman, el mismísimo que sale en el banner">
+                    <img src="img/dibujo2.jpg" alt="Imagen 10" class="gallery-image" data-description="Genos y Saitama de One Punch Man">
+                    <img src="img/dibujo3.jpg" alt="Imagen 11" class="gallery-image" data-description="Ken Kaneki de Tokyo Ghoul">
+                    <img src="img/dibujo4.jpg" alt="Imagen 12" class="gallery-image" data-description="Deku, Bakugo y Todoroki de Boku no Hero Academia">
+                </div>
+        </div>
+    </section>
+
+    <section class="calculations">
+        <h2>Cálculos Matemáticos</h2>
+        <div class="calculator">
+            <h3>Calcula nuestra diferencia de edad</h3>
+            <input type="number" id="user-age" placeholder="Tu edad">
+            <button id="calculate-age">Calcular</button>
+            <p id="age-difference"></p>
+        </div>
+        <div class="calculator">
+            <h3>Calculadora de Costo</h3>
+            <input type="number" id="item-price" placeholder="Precio">
+            <input type="number" id="item-quantity" placeholder="Cantidad">
+            <button id="calculate-cost">Calcular</button>
+            <p id="total-cost"></p>
+        </div>
+
+        <!-- Calculadora de Conversión de Moneda -->
+        <div class="calculator">
+            <h3>Calculadora de Conversión de Moneda</h3>
+            <input type="number" id="currency-amount" placeholder="Monto en CLP">
+            <select id="currency-to">
+                <option value="usd">Dólar Estadounidense (USD)</option>
+                <option value="eur">Euro (EUR)</option>
+                <option value="gbp">Libra Esterlina (GBP)</option>
+                <option value="jpy">Yen Japonés (JPY)</option>
+                <option value="krw">Won Surcoreano (KRW)</option>
+                <option value="cad">Dólar Canadiense (CAD)</option>
+                <option value="aud">Dólar Australiano (AUD)</option>
+                <option value="cny">Yuan Chino (CNY)</option>
+                <option value="inr">Rupia India (INR)</option>
+                <option value="brl">Real Brasileño (BRL)</option>
+                <option value="mxn">Peso Mexicano (MXN)</option>
+            </select>
+            <button id="calculate-currency">Calcular</button>
+            <p id="currency-result"></p>
+        </div>
+
+        <div class="calculator">
+            <h3>Calculadora de IMC</h3>
+            <input type="number" id="weight" placeholder="Peso (kg)">
+            <input type="number" id="height" placeholder="Altura (m)">
+            <button id="calculate-imc">Calcular</button>
+            <p id="imc-result"></p>
+        </div>
+    
+        <div class="calculator">
+            <h3>Calculadora de Descuento</h3>
+            <input type="number" id="original-price" placeholder="Precio Original">
+            <input type="number" id="discount-percent" placeholder="Descuento (%)">
+            <button id="calculate-discount">Calcular</button>
+            <p id="discounted-price"></p>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Contáctame</h2>
+        <form id="contact-form">
+            <input type="text" id="name" name="name" placeholder="Nombre y Apellido">
+            <input type="email" id="email" name="email" placeholder="Correo Electrónico">
+            <input type="text" id="subject" name="subject" placeholder="Asunto">
+            <textarea id="message" name="message" placeholder="Mensaje"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="success-message"></p>
+    </section>
+
+    <footer>
+        <p><a href="https://www.instagram.com/valenrosello/?hl=es-la" target="_blank">ig: @valenrosello</a></p>
+    </footer>
+</body>
+</html>

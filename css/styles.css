@@ -1,0 +1,232 @@
+:root {
+    --primary-color: #F22248; /* Color primario */
+    --secondary-color: #F2138E; /* Color secundario */
+    --terciary-color: #A31BA6; /* Color terciario */
+    --quaternary-color: #1374F2a1; /*  */
+    --quinary-color: #2975D9a1;
+    --font-family: Poppins, sans-serif; /* Fuente */
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    transition: transform 0.6s;
+}
+
+h1:hover {
+    transform: scale(1.2);
+}
+
+h2 {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+h3 {
+    text-align: center;
+    color: var(--primary-color);
+}
+p {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+body {
+    font-family: var(--font-family);
+    background-image: linear-gradient(to bottom, var(--quinary-color), var(--quaternary-color)); /* Fondo gradiente */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+footer {
+    color: var(--secondary-color);
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--secondary-color);
+    transition: font-weight 0.4s ease;  
+}
+
+a:hover {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.banner {
+    background-image: url(../img/banner.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px; /* Donde recorta el gif realmente */
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden; /* Recorta la imagen de fondo */
+}
+
+.contenido-banner {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.contenido-banner h1 {
+    color: white;
+    margin: 0;
+}
+
+/* Estilos para galería de fotos */
+.gallery {
+    background-color: #ffff;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    text-align: center;
+    padding: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery-image {
+    width: 300px; /* Tamaño de las imágenes, pero aún así se adapta al celular */
+    height: 300px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.4s;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+}
+
+.image-modal {
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    z-index: 999; /* No se ve raro al apretar la foto (recuadro sobre la imagen al apretar) */
+}
+
+#modal-image {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+#modal-description {
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+    top: 10px;
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+/* Estilos para formulario de contacto */
+.contact {
+    background-color: #ffff;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--quaternary-color);
+}
+
+
+#success-message {
+    color: rgb(102, 201, 102);
+    text-align: center;
+}
+
+/* Estilos para secciones de intereses */
+.interests { 
+    padding: 20px;
+    background-color: #ffff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.interest {
+    background-color: #ffff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para calculadoras */
+.calculations {
+    padding: 20px;
+    background-color: #ffff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.calculator {
+    background-color: #ffff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .gallery-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .calculator {
+        width: 80%;
+    }
+}
